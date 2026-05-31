@@ -269,14 +269,300 @@
                                     x-data="dashboardView()"
                                     x-init="getData"
                                     >
-                                        
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-success" x-text="dataDashboard.data.yesterday.dn__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                                
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-success" x-text="dataDashboard.data.yesterday.dn__local[0].totalNett ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-success" x-text="dataDashboard.data.yesterday.dn__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-success" x-text="dataDashboard.data.yesterday.dn__export[0].totalNett ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-inbox f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-success">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Yesterday
+                                                            <span class="ml-3 mr-2" x-text="dataDashboard.data.yesterday.dn[0].total ?? 0"></span>|
+                                                            <span class="ml-2" x-text="dataDashboard.data.yesterday.dn[0].totalNett ?? 0"></span>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-purple" x-text="dataDashboard.data.today.dn__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-purple" x-text="dataDashboard.data.today.dn__local[0].totalNett ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-purple" x-text="dataDashboard.data.today.dn__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-purple" x-text="dataDashboard.data.today.dn__export[0].totalNett ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                        
+                                                        </div>
+                                                        
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-flag f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-c-purple">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Surat Jalan
+                                                                <span class="ml-3 mr-2" x-text="dataDashboard.data.today.dn[0].total ?? 0"></span>|
+                                                                <span class="ml-2" x-text="dataDashboard.data.today.dn[0].totalNett ?? 0"></span>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <a href="datadelivery.html?status=dn"><i class="fa fa-external-link text-white f-20"></i></a>
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-blue" x-text="dataDashboard.data.today.selesai__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-blue" x-text="dataDashboard.data.today.selesai__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-archive f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-c-blue">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Selesai Muat<span class="ml-3" x-text="dataDashboard.data.today.selesai[0].total ?? 0"></span></h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <a href="datadelivery.html?status=selesai"><i class="fa fa-external-link text-white f-20"></i></a>
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-blue" x-text="dataDashboard.data.today.proses__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-blue" x-text="dataDashboard.data.today.proses__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-truck f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-info">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Proses Muat<span class="ml-3" x-text="dataDashboard.data.today.proses[0].total ?? 0"></span></h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <a href="datadelivery.html?status=proses"><i class="fa fa-external-link text-white f-20"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-lite-green" x-text="dataDashboard.data.today.antri__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-lite-green" x-text="dataDashboard.data.today.antri__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-file-text f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-c-lite-green">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Antri Muat<span class="ml-3" x-text="dataDashboard.data.today.antri[0].total ?? 0"></span></h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <a href="datadelivery.html?status=antri"><i class="fa fa-external-link text-white f-20"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Local</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-red" x-text="dataDashboard.data.today.batal__local[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <hr />
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-muted m-b-0">Export</h5>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h5 class="text-c-red" x-text="dataDashboard.data.today.batal__export[0].total ?? 0">0</h5>
+                                                                </div>
+                                                            </div>
+                                                            <hr />
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <i class="fa fa-undo f-28"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-c-red">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-9">
+                                                            <h4 class="text-white m-b-0">Batal Muat<span class="ml-3" x-text="dataDashboard.data.today.batal[0].total ?? 0"></span></h4>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <a href="datadelivery.html?status=batal"><i class="fa fa-external-link text-white f-20"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="col-xl-12 col-xs-6">
                                             <div class="card">
                                                 
-                                                <div class="card-header bg-primary">
+                                                <div class="card-header bg-secondary">
                                                     <div class="row align-items-center">
                                                         <div class="col-9">
-                                                            <h4 class="text-white m-b-0">Delivery PM1</h4>
+                                                            <h4 class="text-white m-b-0">Akses Cepat - Scan Barcode</h4>
                                                         </div>
                                                         
                                                         <div class="col-3 text-right">
@@ -284,80 +570,41 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
                                                 <div class="card-block">
-                                                    
-                                                    <div class="row align-items-center table-responsive">
-                                                        <table class="table table-hover table-border-style text-center align-middle table-bordered w-100">
-                                                            <thead>
-                                                                <tr class="text-center">
-                                                                    <th rowspan="2" class="text-center align-middle">Status</th>
-                                                                    <th colspan="3" class="text-center">Unit</th>
-                                                                    <th rowspan="2" class="align-middle">Scan Barcode</th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Local</th>
-                                                                    <th>Export</th>
-                                                                    <th>Total</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-3">
+                                                                    <button @click="clickButton('daftar')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-lite-green text-white">Daftar</button>
+                                                                </div>
+                                                                <div class="col-sm-3 ">
+                                                                    <button @click="clickButton('proses')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-info">Proses</button>
+                                                                </div>
                                                                 
-                                                                <tr>
-                                                                    <th class=" align-middle">Antri Muat <a href="datadelivery.html?status=antri"><i class="fa fa-external-link text-c-blue f-18"></i></th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.antri__local[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.antri__export[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.antri[0].total ?? 0">&nbsp;</th>
-                                                                    <th>
-                                                                        <button @click="clickButton('daftar')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-lite-green text-white">Daftar</button>
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class=" align-middle">Proses Muat <a href="datadelivery.html?status=proses"><i class="fa fa-external-link text-c-blue f-18"></i></th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.proses__local[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.proses__export[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.proses[0].total ?? 0">&nbsp;</th>
-                                                                    <th>
-                                                                        <button @click="clickButton('proses')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-info">Proses</button>
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class=" align-middle">Selesai Muat <a href="datadelivery.html?status=selesai"><i class="fa fa-external-link text-c-blue f-18"></i></th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.selesai__local[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.selesai__export[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.selesai[0].total ?? 0">&nbsp;</th>
-                                                                    <th>
+                                                                <div class="col-sm-3">
                                                                     <button  @click="clickButton('selesai')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-primary">Selesai Muat</button>
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class=" align-middle">Surat Jalan <a href="datadelivery.html?status=dn"><i class="fa fa-external-link text-c-blue f-18"></i></th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.dn__local[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.dn__export[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.dn[0].total ?? 0">&nbsp;</th>
-                                                                    <th>
-                                                                    <button  @click="clickButton('dn')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-purple text-white">Surat Jalan</button>
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class=" align-middle">Batal Muat <a href="datadelivery.html?status=dn"><i class="fa fa-external-link text-c-blue f-18"></i></th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.batal__local[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.batal__export[0].total ?? 0">&nbsp;</th>
-                                                                    <th class="text-center" x-text="dataDashboard.data.today.batal[0].total ?? 0">&nbsp;</th>
-                                                                    <th>
-                                                                    <button  @click="clickButton('batal')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-red text-white">Batal Muat</button>
-                                                                    </th>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-3">
+                                                                    <button  @click="clickButton('dn')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-purple text-white">Surat Jalan Print</button>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                    <button  @click="clickButton('ambil')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-success">Surat Jalan Ambil</button>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                    <button  @click="clickButton('batal')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-danger">Batal</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
                                                     </div>
                                                 </div>
-
+                                                
                                             </div>
                                         </div>
-                                        
-
-                                        
 
                                         <!-- Modal Start -->
                                         <div class="modal fade" id="modalScanBarcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
