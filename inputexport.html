@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Finish Good IKK</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Finished Goods IKK" />
+    <meta name="keywords" content="Indah Kiat Pulp & Paper" />
+    <meta name="author" content="FG Team Work" />
+    <!-- Favicon icon -->
+    
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Notification.css -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+                                    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/handsontable@14.3.0/dist/handsontable.full.min.css"
+  />
+
+</head>
+
+<body>
+    <div class="container-loader" x-init x-show="$store.globVar.isLoading"  x-transition.duration.300ms>
+    <div class="custom-loader"></div>
+    </div>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="index.html">
+                          <img class="img-fluid" src="assets/images/app-logo.png" alt="APP Logo" />
+                      </a>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                     
+                      <ul class="nav-right">
+                          <li class="header-notification">
+                              
+                          </li>
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/avatar-blank.jpg" class="img-radius" alt="User-Profile-Image">
+                                  <span x-data x-text="getUserObject().data.FullName">User</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="logout.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+    
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                
+
+                <!-- Start Sidebar -->
+
+                <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                        <div class="p-15 p-b-0">    
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+                          <ul class="pcoded-item pcoded-left-item">
+                              <li class="active">
+                                  <a href="index.html" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                          </ul>
+                          <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-package"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Selongsong</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Stock</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="incomingselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataincoming.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="postingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Posting Accounting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="datapostingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Posting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-truck"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Delivery</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        
+                                        <li>
+                                            <a href="inputtruck.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Daftar Truck</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=antri" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Antri Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=proses" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Proses Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=selesai" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Selesai Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=gi" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Good Issue</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=batal" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Batal Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="deliveryscore.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Score Board</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="reportdelivery.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Report</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="inputexport.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Planning Export</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Berita Acara</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputberitaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="databeritaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Roll List</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="emailrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Email Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="uploadrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Upload Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                  </nav>
+
+                <!-- End Sidebar -->
+
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper" x-data="inputExport()">
+                                <!-- Page body start -->
+                                <div class="page-body button-page" x-show="formShow">
+                                    <div class="row">
+                                        <!-- bootstrap modal start -->
+                                        <div class="col-sm-12">
+                                            <!-- Notification card start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Input Delivery Export</h5>
+                                                </div>
+                                                <div class="card-block">
+                                                     <form @submit.prevent="">
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label">Tanggal Stuffing</label>
+                                                            <div class="col-sm-3">
+                                                                <input id="txt_tglExport" type="date" class="form-control" x-model="dataForm.tglExport" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">Tanggal Closing</label>
+                                                            <div class="col-sm-3">
+                                                                <input id="txt_tglClosing" type="date" class="form-control" x-model="dataForm.tglClosing" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row pt-2">
+                                                            <label class="col-sm-2 col-form-label">No SC</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" x-model="dataForm.noSC" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">No DN</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" x-bind:disabled="!enableSaveButton" class="form-control" x-model="dataForm.noDN" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">Qty (MT)</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="number" class="form-control" x-model="dataForm.qty" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row pt-2">
+                                                            <label class="col-sm-2 col-form-label">EMKL</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" x-model="dataForm.EMKL" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">Shipping Line</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" x-model="dataForm.shippingLine" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">Destintation</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" x-model="dataForm.destination" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row pt-2">
+                                                            <label class="col-sm-2 col-form-label">20feet</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="number" class="form-control" x-model="dataForm.feet20" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">40feet</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="number" class="form-control" x-model="dataForm.feet40" required>
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">HC</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="number" class="form-control" x-model="dataForm.HC" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row pt-2">
+                                                            <label class="col-sm-2 col-form-label">Keterangan</label>
+                                                            <div class="col-sm-10">
+                                                                <textarea class="form-control" x-model="dataForm.keterangan"></textarea>
+                                                                <input type="hidden" class="form-control" x-model="dataForm.id" required>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="form-group row">
+                                                        <div class="col-md-3" x-show="enableSaveButton">
+                                                            <button type="button" @click="submitForm()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                <span class="icofont icofont-save"> Simpan</span>
+                                                            </button>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3" x-show="!enableSaveButton">
+                                                            <button type="button" @click="updateForm()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                <span class="icofont icofont-save"> Update</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-sm-3" x-show="formShow">
+                                                            <button type="button" @click="clearForm()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                <span class="icofont icofont-exit"> Cancel</span>
+                                                            </button>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                    </form>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <!-- Notification card end -->
+                                        </div>
+                                        <!-- Bootstrap modal end -->
+                                    </div>
+
+                                    
+                                    
+                                     <!-- Page body 2 start -->
+                                    <div class="page-body button-page" x-show="dataShow">
+                                        <div class="row">
+                                            <!-- bootstrap modal start -->
+                                            <div class="col-sm-12">
+                                                <!-- Notification card start -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Data Delivery Export</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <button @click="dataShow = false;formShow = true" class="btn waves-effect waves-light btn-primary">
+                                                                    <span class="icofont icofont-plus"> Input</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <button @click="dataShow = false;importShow = true" class="btn waves-effect waves-light btn-primary">
+                                                                    <span class="icofont icofont-upload"> Import</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                    <input id="txt_tglFrom" type="date" class="form-control">
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <input id="txt_tglTo" type="date" class="form-control">
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-2">
+                                                                <button @click="getData()"  class="btn waves-effect waves-light btn-primary">
+                                                                    <span class="icofont icofont-search"> Search</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+
+                                                            <div class="table-responsive"
+                                                            >
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr class="bg-primary">
+                                                                        <th>No</th>
+                                                                        <th>No SC</th>
+                                                                        <th>No DN</th>
+                                                                        <th>Plan</th>
+                                                                        <th>Done</th>
+                                                                        <th>Proses</th>
+                                                                        <th>EMKL</th>
+                                                                        <th>Shipping Lines</th>
+                                                                        <th>Destination</th>
+                                                                        <th>Plan (Qty)</th>
+                                                                        <th>Done (Qty)</th>
+                                                                        <th>Tanggal Closing</th>
+                                                                        <th>Keterangan</th>
+                                                                        <th>&nbsp;</th>
+                                                                        <th>&nbsp;</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <template x-for="(exportData,index) in tableExport" >
+                                                                        <tr>
+                                                                            <th scope="row" x-text="index+1"></th>
+                                                                            <td x-text="exportData.noSC"></td>
+                                                                            <td x-text="exportData.noDN"></td>
+                                                                            <td x-text="exportData.partai"></td>
+                                                                            <td x-text="exportData.done"></td>
+                                                                            <td x-text="exportData.proses"></td>
+                                                                            <td x-text="exportData.EMKL"></td>
+                                                                            <td x-text="exportData.shippingLine"></td>
+                                                                            <td x-text="exportData.destination"></td>
+                                                                            <td x-text="exportData.qty"></td>
+                                                                            <td x-text="exportData.doneQty"></td>
+                                                                            <td x-text="indoDate(exportData.tglClosing.toDate())"></td>
+                                                                            <td x-text="exportData.keterangan"></td>
+                                                                            <td>
+                                                                                <span class="icofont icofont-pencil" @click="updateItem(index)"></span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="icofont icofont-trash" @click="deleteItem(exportData)"></span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </template>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="page-body button-page" x-show="importShow">
+                                        <div class="row">
+                                            <!-- bootstrap modal start -->
+                                            <div class="col-sm-12">
+                                                <!-- Notification card start -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Import Data BOC</h5>
+                                                    </div>
+                                                    <div class="card-block" x-init="initTable()">
+                                                        <div class="form-group row">
+                                                            <div id="hot" style=" width: 100%;"></div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <button type="button" @click="simpanData()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                    <span class="icofont icofont-save"> Simpan</span>
+                                                                </button>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-3">
+                                                                <button type="button" @click="clearImport()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                    <span class="icofont icofont-exit"> Cancel</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <!-- Page body end -->
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main-body end -->
+                
+                <div id="styleSelector">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                            
+        
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     
+<script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     
+<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- notification js -->
+<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="assets/pages/notification/notification.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/vertical-layout.min.js "></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.15.0/cdn.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@14.3.0/dist/handsontable.full.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/backend.js "></script>
+    <script type="text/javascript" src="assets/js/functionIKK.js "></script>
+    <script type="text/javascript" src="assets/js/auth.js "></script>
+    <script type="module">
+        import { addExport, readExportByDN, readExportByDate, readExport, updateExport, deleteExport, getStayingSummary, getMergedClosingByDate } from './assets/js/export.js';
+        const modelExport = { addExport, readExportByDN, readExportByDate, readExport, updateExport, deleteExport, getStayingSummary, getMergedClosingByDate }
+        window.modelExport = modelExport; // Attach object to global scope
+    </script>
+    <script>
+        
+        document.getElementById("txt_tglFrom").value = hariIni()
+        document.getElementById("txt_tglTo").value = hariIni()
+        function inputExport() {
+            return {
+                dataForm: {
+                    id: "",
+                    tglExport: "",
+                    noSC:"",
+                    noDN: "",
+                    EMKL:"",
+                    shippingLine:"",
+                    destination:"",
+                    feet20: 0,
+                    feet40: 0,
+                    HC: 0,
+                    qty: "",
+                    tglClosing: "",
+                    timeClosing:"",
+                    finished:0,
+                    keterangan: ""
+                },
+                dataShow: true,
+                formShow: false,
+                importShow: false,
+                errors: {},
+                validate() {
+                    this.errors = {};
+                    if (!this.dataForm.tglExport || !this.dataForm.tglClosing) {
+                        this.errors.message = 'Tanggal is required.'
+                        console.log(this.errors.message)
+                    }
+                    if (!this.dataForm.noDN) {
+                        this.errors.message = 'Nomor DN is required'
+                    }
+                    
+                    return Object.keys(this.errors).length === 0
+                },
+                clearForm(){
+                    this.dataForm.noSC =  ""
+                    this.dataForm.noDN =  ""
+                    this.dataForm.EMKL = ""
+                    this.dataForm.shippingLine = ""
+                    this.dataForm.destination = ""
+                    this.dataForm.feet20 = 0
+                    this.dataForm.feet40 = 0
+                    this.dataForm.HC = 0
+                    this.dataForm.qty = ""
+                    this.dataForm.keterangan = ""
+                    this.dataForm.id = ""
+                    this.dataForm.tglExport = ""
+                    this.dataForm.tglClosing = ""
+                    this.dataForm.timeClosing = ""
+                    this.dataForm.finished = 0
+                    this.enableSaveButton = true
+                    this.formShow = false
+                    this.dataShow = true
+                },
+                async submitForm(){
+                    if(!this.validate()){
+                            notify(this.errors.message, "danger");
+                            throw new Error(this.errors.message)
+                    }
+                    
+                    try{
+                            Alpine.store('globVar').isLoading = true
+                            const submitDataForm = { ...this.dataForm }
+                            console.log(submitDataForm)
+                            let answer = await modelExport.addExport(submitDataForm)
+                            if(typeof answer != "undefined"){
+                                this.getData()
+                                this.clearForm()
+                            }
+                            //console.log(this.dataForm)
+                        } catch (error){
+                            notify(error, 'danger');
+                            console.log(error)
+                        } finally {
+                            Alpine.store('globVar').isLoading = false
+                        }      
+                            
+                        
+                },
+                async updateForm(){
+                    if(!this.validate()){
+                            notify(this.errors.message, "danger");
+                            throw new Error(this.errors.message)
+                    }
+                    
+                    try{
+                            Alpine.store('globVar').isLoading = true
+                            const submitDataForm = { ...this.dataForm }
+                            console.log(submitDataForm)
+                            let answer = await modelExport.updateExport(submitDataForm)
+                            if(typeof answer != "undefined"){
+                                this.getData()
+                                this.clearForm()
+                                
+                            }
+                            //console.log(this.dataForm)
+                        } catch (error){
+                            notify(error, 'danger');
+                            console.log(error)
+                        } finally {
+                            Alpine.store('globVar').isLoading = false
+                        }      
+                            
+                        
+                },
+                async deleteItem(data){
+                    console.log(data)
+                    if(confirm(`Yakin ingin menghapus no DN ${data.noDN}?`)){
+                        const answer = await modelExport.deleteExport(data.id)
+                        this.getData()
+                    } else {
+                        console.log("no")
+                    }
+                },
+                dateFrom: "",
+                dateTo: "",
+                tableExport: [],
+                enableSaveButton: true,
+                selDetailValue: "true",
+                async getData(){
+                    Alpine.store('globVar').isLoading = true
+                    this.dateFrom = new Date(document.getElementById("txt_tglFrom").value)
+                    this.dateTo = addOneDayToDate(new Date(document.getElementById("txt_tglTo").value))
+                    
+                    try{
+                        //this.tableExport = await modelExport.readExportByDate(this.dateFrom,this.dateTo)
+                        this.tableExport = await modelExport.getMergedClosingByDate(this.dateFrom,this.dateTo)
+                        //this.tableExport = await modelExport.readExport()
+                        console.log(this.tableExport)
+                    }catch(err){
+                        console.log(err)
+                        notify(err,"danger")
+                    }finally{
+                        Alpine.store('globVar').isLoading = false
+                    }
+                        
+                },
+                async updateItem(index){
+                    this.formShow = true
+                    this.dataShow = false
+                    this.dataForm.tglExport = dateYMD(this.tableExport[index].tglExport.toDate())
+                    this.dataForm.tglClosing = dateYMD(this.tableExport[index].tglClosing.toDate())
+                    this.dataForm.keterangan = this.tableExport[index].keterangan
+                    this.dataForm.noDN = this.tableExport[index].noDN
+                    this.dataForm.noSC = this.tableExport[index].noSC
+                    this.dataForm.qty = this.tableExport[index].qty
+                    this.dataForm.EMKL = this.tableExport[index].EMKL
+                    this.dataForm.shippingLine = this.tableExport[index].shippingLine
+                    this.dataForm.destination = this.tableExport[index].destination
+                    this.dataForm.feet20 = this.tableExport[index].feet20
+                    this.dataForm.feet40 = this.tableExport[index].feet40
+                    this.dataForm.HC = this.tableExport[index].HC
+                    //this.dataForm.partai = this.tableExport[index].partai
+                    this.dataForm.id = this.tableExport[index].id
+                    this.enableSaveButton = false
+                    const result = await modelExport.getStayingSummary(this.tableExport[index].noDN, this.tableExport[index].partai)
+                    console.log(result)
+                },
+                hotInstance: null,
+                tableHeader: [
+                                'SC', 
+                                'Delivery', 
+                                'EMKL',
+                                'Shipping Lines',
+                                'Dest',
+                                '20feet',
+                                '40feet',
+                                'HC',
+                                'Qty',
+                                'Closing Date',
+                                'Closing Time',
+                                'Remark'
+                            ],
+                jsonHeader: [   
+                                "noSC",
+                                "noDN",
+                                "EMKL",
+                                "shippingLine",
+                                "destination",
+                                "feet20",
+                                "feet40",
+                                "HC",
+                                "qty",
+                                "tglClosing",
+                                "timeClosing",
+                                "keterangan"
+                            ],
+                typeColumns: [
+                    { type: 'text' }, // First column: text
+                    { type: 'text' }, 
+                    { type: 'text' }, 
+                    { type: 'text' }, 
+                    { type: 'text' },  
+                    { type: 'text' },  
+                    { type: 'text' },  
+                    { type: 'text' },  
+                    { type: 'text' },  
+                    { type: 'text' },  
+                    { type: 'text' },    
+                    { type: 'text' },  
+                    /*
+                    { 
+                        type: 'date',    
+                        dateFormat: 'YYYY-MM-DD',
+                        correctFormat: true,
+                        allowEmpty: false
+                    },
+                        {
+                        type: 'time',
+                        timeFormat: 'HH:mm',
+                        correctFormat: true,
+                        allowEmpty: false
+                        },
+                    */
+                    ],
+                tableData: [[]],
+                initTable() {
+                const container = document.getElementById('hot');
+
+                // Create an empty table with min rows/cols
+                this.hotInstance = new Handsontable(container, {
+                    data: this.tableData, // Start with one empty row
+                    rowHeaders: true,
+                    colHeaders: this.tableHeader,
+                    columns: this.typeColumns,
+                    minRows: 10, // Minimum rows to display
+                    minSpareRows: 1,
+                    minCols: 11, // Minimum columns to display
+                    stretchH: 'all',
+                    licenseKey: 'non-commercial-and-evaluation', // Required for Handsontable
+
+                    columnSorting: true,
+                    filters: true,
+                    height: 'auto',
+                    copyPaste: true, // Enable built-in copy/paste
+                });
+                this.hotInstance.addHook('beforePaste', (data, coords) => {
+                    // Normalize LibreOffice Calc clipboard data
+                    for (let r = 0; r < data.length; r++) {
+                        for (let c = 0; c < data[r].length; c++) {
+                        if (typeof data[r][c] === 'string') {
+                            // Trim spaces and quotes
+                            data[r][c] = data[r][c].trim().replace(/^"|"$/g, '');
+                        }
+                        }
+                    }
+                    // Returning false cancels paste, so we just return nothing to allow it
+                    });
+
+                },
+                logData() {
+                const tableData = this.hotInstance.getData();
+                const jsonData = tableData.map(row => {
+                        const obj = {};
+                        this.jsonHeader.forEach((header, index) => {
+                        obj[header] = row[index]??"";
+                        });
+                    return obj;
+                });
+                const excelData = tableData.map(row => {
+                        const obj = {};
+                        this.tableHeader.forEach((header, index) => {
+                        obj[header] = row[index]??"";
+                        });
+                    return obj;
+                });
+                
+                const result = jsonData.filter(obj => obj.noDN != "");
+                const result2 = excelData.filter(obj => obj.Delivery != "");
+                console.log('Current Table Data:', result);
+                alert(JSON.stringify(result));
+                },
+                clearImport(){
+                    this.dataShow = true
+                    this.importShow = false
+                },
+                async simpanData(){
+                const tableData = this.hotInstance.getData();
+                const jsonData = tableData.map(row => {
+                        const obj = {};
+                        this.jsonHeader.forEach((header, index) => {
+                        obj[header] = row[index]??"";
+                        });
+                    return obj;
+                });
+                
+                const result = jsonData.filter(obj => obj.noDN != "");
+                await Promise.all(result.map(row => modelExport.addExport(row))).then((results) => {
+                    console.log("All promises resolved successfully!");
+                    console.log("Results array:", results);
+                    this.dataShow = true
+                    this.importShow = false
+                })
+                .catch((error) => {
+                    // This will not run in this example because all succeed
+                    console.error("One of the promises failed:", error);
+                    notify(error, 'danger');
+                });
+                }
+            }
+        }
+    </script>
+    
+    <script>
+    
+      
+    </script>
+     <script>
+    document.addEventListener('alpine:init', () => {
+            Alpine.store('globVar', {
+                  isLoading: false,
+                  isShow: false,
+                  toggleIsShow(){
+                     this.isShow = !this.isShow
+                  }
+            });
+         });
+    </script>
+
+    
+</body>
+
+</html>

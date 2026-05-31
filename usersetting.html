@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Finish Good IKK</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Finished Goods IKK" />
+    <meta name="keywords" content="Indah Kiat Pulp & Paper" />
+    <meta name="author" content="FG Team Work" />
+    <!-- Favicon icon -->
+    
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Notification.css -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+    <div class="container-loader" x-init x-show="$store.globVar.isLoading"  x-transition.duration.300ms>
+    <div class="custom-loader"></div>
+    </div>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="index.html">
+                          <img class="img-fluid" src="assets/images/app-logo.png" alt="APP Logo" />
+                      </a>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                     
+                      <ul class="nav-right">
+                          <li class="header-notification">
+                              
+                          </li>
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/avatar-blank.jpg" class="img-radius" alt="User-Profile-Image">
+                                  <span x-data x-text="getUserObject().data.FullName">User</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="logout.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+    
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                
+                <!-- Start Sidebar -->
+
+                <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                        <div class="p-15 p-b-0">    
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+                          <ul class="pcoded-item pcoded-left-item">
+                              <li class="active">
+                                  <a href="index.html" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                          </ul>
+                          <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-package"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Selongsong</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Stock</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="incomingselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataincoming.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="postingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Posting Accounting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="datapostingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Posting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-truck"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Delivery</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        
+                                        <li>
+                                            <a href="inputtruck.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Daftar Truck</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=antri" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Antri Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=proses" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Proses Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=selesai" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Selesai Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=gi" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Good Issue</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=batal" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Batal Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="deliveryscore.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Score Board</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="reportdelivery.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Report</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="inputexport.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Planning Export</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Berita Acara</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputberitaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="databeritaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Roll List</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="emailrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Email Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="uploadrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Upload Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                  </nav>
+
+                <!-- End Sidebar -->
+
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page body start -->
+                                <div class="page-body button-page">
+                                    
+                                    <div class="row">
+                                            <div class="col-sm-12">
+                                                <!-- Basic Form Inputs card start -->
+                                                <form x-data="getIML()" @submit.prevent="">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>User Setting</h5>
+                                                        
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <h4 class="sub-title">E-Signature</h4>
+                                                                                                                        
+
+                                                            <div class="form-group row" x-data="getUserSetting()">
+                                                                <div class="col-sm-10">
+
+                                                                <!-- Button trigger modal -->
+                                                                    <div class="form-group row">
+                                                                        <label class="col-sm-2 col-form-label">Full Name</label>
+                                                                        <div class="col-sm-4">
+                                                                            <input type="text" class="form-control" x-text="getUserObject().data.FullName" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="button" class="btn waves-effect btn-primary" data-toggle="modal" data-target="#modalESign">
+                                                                    <span class="icofont icofont-pen-alt-1"> E-Signature</span>
+                                                                    </button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="modalESign" tabindex="-1" role="dialog" >
+                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="exampleModalCenterTitle">Tanda Tangan</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span>&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <canvas id="sig-canvas" width="500" height="250" >
+                                                                                    Get a better browser, bro.
+                                                                                    </canvas>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button class="btn btn-primary" id="sig-submitBtn" data-dismiss="modal">Submit Signature</button>
+                                                                                    <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-10">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4 border">
+                                                                                <textarea id="sig-dataUrl" class="form-control d-none" rows="5"></textarea>
+                                                                                <img id="sig-image" src="" alt="Tanda Tangan"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    
+                                                                </div>
+                                                    
+                                                            <br />
+                                                            <div class="col-md-3 pt-4">
+                                                                <button type="button" @click="submitForm()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                                                    
+                                                                    Simpan
+                                                                </button>
+                                                                
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                </div>
+                                <!-- Page body end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main-body end -->
+                
+                <div id="styleSelector">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- notification js -->
+<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="assets/pages/notification/notification.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/vertical-layout.min.js "></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.15.0/cdn.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+
+    <script type="text/javascript" src="assets/js/firestore.js "></script>
+    <script type="text/javascript" src="assets/js/backend.js "></script>
+    <script type="text/javascript" src="assets/js/functionIKK.js "></script>
+    <script type="text/javascript" src="assets/js/auth.js "></script>
+    
+    <script>
+        
+        (function() {
+        window.requestAnimFrame = (function(callback) {
+            return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimaitonFrame ||
+            function(callback) {
+                window.setTimeout(callback, 1000 / 60);
+            };
+        })();
+        
+        var canvas = document.getElementById("sig-canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#222222";
+        ctx.lineWidth = 4;
+
+        var drawing = false;
+        var mousePos = {
+            x: 0,
+            y: 0
+        };
+        var lastPos = mousePos;
+
+        canvas.addEventListener("mousedown", function(e) {
+            drawing = true;
+            lastPos = getMousePos(canvas, e);
+        }, false);
+
+        canvas.addEventListener("mouseup", function(e) {
+            drawing = false;
+        }, false);
+
+        canvas.addEventListener("mousemove", function(e) {
+            mousePos = getMousePos(canvas, e);
+        }, false);
+
+        // Add touch event support for mobile
+        canvas.addEventListener("touchstart", function(e) {
+
+        }, false);
+
+        canvas.addEventListener("touchmove", function(e) {
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousemove", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchstart", function(e) {
+            mousePos = getTouchPos(canvas, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+            });
+            disableScroll();
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchend", function(e) {
+            var me = new MouseEvent("mouseup", {});
+            enableScroll();
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.onwheel = function(event){
+            event.preventDefault();
+        }
+
+        canvas.onmousewheel = function(event){
+            event.preventDefault();
+        }
+
+        function disableScroll(){
+            document.body.style.overflow = "hidden"
+        }
+
+        function enableScroll(){
+            document.body.style.overflow = ""
+        }
+
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+            x: mouseEvent.clientX - rect.left,
+            y: mouseEvent.clientY - rect.top
+            }
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+            x: touchEvent.touches[0].clientX - rect.left,
+            y: touchEvent.touches[0].clientY - rect.top
+            }
+        }
+
+        function renderCanvas() {
+            if (drawing) {
+            ctx.moveTo(lastPos.x, lastPos.y);
+            ctx.lineTo(mousePos.x, mousePos.y);
+            ctx.stroke();
+            lastPos = mousePos;
+            }
+        }
+
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener("touchstart", function(e) {
+            if (e.target == canvas) {
+            e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchend", function(e) {
+            if (e.target == canvas) {
+            e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchmove", function(e) {
+            if (e.target == canvas) {
+            e.preventDefault();
+            }
+        }, false);
+
+        (function drawLoop() {
+            requestAnimFrame(drawLoop);
+            renderCanvas();
+        })();
+
+        function clearCanvas() {
+            canvas.width = canvas.width;
+            sigImage.classList.add("d-none");
+        }
+
+        // Set up the UI
+        var sigText = document.getElementById("sig-dataUrl");
+        var sigImage = document.getElementById("sig-image");
+        var clearBtn = document.getElementById("sig-clearBtn");
+        var submitBtn = document.getElementById("sig-submitBtn");
+        clearBtn.addEventListener("click", function(e) {
+            clearCanvas();
+            sigText.innerHTML = "";
+            sigImage.setAttribute("src", "");
+        }, false);
+        submitBtn.addEventListener("click", function(e) {
+            var dataUrl = canvas.toDataURL();
+            sigText.innerHTML = dataUrl;
+            sigImage.setAttribute("src", dataUrl);
+            sigImage.classList.remove("d-none");
+        }, false);
+
+        })();
+
+    </script>
+    
+  <script>
+    function getUserSetting() {
+            return {
+                dataForm: {
+                    noIML: "",
+                    noDN: "",
+                    nopol: "",
+                    namaSupir: "",
+                    ekspedisi: "",
+                    customer: "",
+                    qty: 0,
+                    tglDelivery:"",
+                    tglIML:"",
+                    eSign: "",
+                    posted: false,
+                    postedHeaderId: "",
+                },
+                buttonText: "Transfer",
+                buttonScanText: "Scan Barcode",
+                loading: false,
+                showDetail: false,
+                showNotification: false,
+                textNotification: "",
+                bgNotification: "",
+                showTransferForm: true,
+                clearESign(){
+                    document.getElementById("sig-clearBtn").click()
+                },
+                clearForm(){
+                    this.clearESign()
+                    this.dataForm.noDN = ""
+                    this.dataForm.noIML = "";
+                    this.dataForm.nopol = "";
+                    this.dataForm.namaSupir = "";
+                    this.dataForm.ekspedisi = "";
+                    this.dataForm.customer = "";
+                    this.dataForm.tglIML = "";
+                    this.dataForm.qty = 0;
+
+                },
+
+                getByID() {
+                    
+                },
+                async submitForm() {
+                    
+                }
+            }
+        }
+                    
+  </script>
+  <script>
+    document.addEventListener('alpine:init', () => {
+            Alpine.store('globVar', {
+                  isLoading: false,
+                  isShow: false,
+                  toggleIsShow(){
+                     this.isShow = !this.isShow
+                  },
+                  isToast: false,
+                  toastClass: "",
+                  messages: "",
+                  toastOn(status, messages){
+                    (status) ? this.toastClass = "alert-success" : this.toastClass = "alert-danger" 
+                    this.isToast = true
+                    this.messages = messages
+                    setTimeout(function(){
+                            Alpine.store('globVar').toastOff()
+                        }, 3000);
+                  },
+                  toastOff(){
+                    this.isToast = false
+                  }
+            });
+         });
+    
+  </script>
+</body>
+
+</html>

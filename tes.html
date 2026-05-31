@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesseract.js Bounding Box Demo</title>
+    <!-- Load Tesseract.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <style>
+        #container { position: relative; display: inline-block; }
+        #overlay { position: absolute; top: 0; left: 0; pointer-events: none; }
+        .box { position: absolute; border: 2px solid red; pointer-events: none; }
+        img { max-width: 1000px; display: block; }
+        #status { margin: 10px 0; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+
+    <h1>OCR with Bounding Boxes</h1>
+    <input type="file" id="file-input" accept="image/*">
+    <div id="status">Upload an image to start...</div>
+
+    <div id="container">
+        <img id="selected-image" src="" alt="">
+        <div id="overlay"></div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const image = document.getElementById('selected-image');
+        const overlay = document.getElementById('overlay');
+        const status = document.getElementById('status');
+
+        fileInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            // Display the image
+            image.src = URL.createObjectURL(file);
+            overlay.innerHTML = ''; // Clear previous boxes
+            
+            image.onload = async () => {
+                status.innerText = 'Initializing Tesseract...';
+                
+                // Create Worker
+                const worker = await Tesseract.createWorker('eng', 1, {
+                    logger: m => {
+                        if (m.status === 'recognizing text') {
+                            status.innerText = `Recognizing: ${Math.round(m.progress * 100)}%`;
+                        }
+                    }
+                });
+
+                // Perform OCR
+                const { data } = await worker.recognize(image);
+                
+                status.innerText = 'Done!';
+                console.log(data); // View full data structure in console
+                
+                /*
+                  data.words.forEach(word => {
+                    console.log(`Word: ${word.text}`);
+                    console.log(`Bounding Box: `, word.bbox); 
+                    // bbox format: { x0, y0, x1, y1 }
+                });
+                */
+                // Draw bounding boxes for each word
+                
+                data.words.forEach(word => {
+                    const box = document.createElement('div');
+                    box.className = 'box';
+                    
+                    // Coordinates provided by Tesseract
+                    const { x0, y0, x1, y1 } = word.bbox;
+                    
+                    box.style.left = x0 + 'px';
+                    box.style.top = y0 + 'px';
+                    box.style.width = (x1 - x0) + 'px';
+                    box.style.height = (y1 - y0) + 'px';
+                    
+                    // Optional: Add tooltip with the text
+                    box.title = `${word.text} (Conf: ${Math.round(word.confidence)}%)`;
+                    
+                    overlay.appendChild(box);
+                });
+                
+                await worker.terminate();
+            };
+        });
+    </script>
+</body>
+</html>

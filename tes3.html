@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tesseract.js OCR Example</title>
+</head>
+<body>
+  <h2>OCR Document Photo</h2>
+  <input type="file" id="fileInput" accept="image/*">
+  <pre id="output"></pre>
+
+  <!-- Load Tesseract.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script>
+    // Function to extract a specific field from OCR text
+    function extractField(text, fieldName) {
+        // Example: Extract "Invoice Number: 12345"
+        const regex = new RegExp(`${fieldName}\\s*[:\\-]?\\s*(.+)`, 'i');
+        const match = text.match(regex);
+        return match ? match[1].trim() : null;
+    }
+
+    //const targetWords = ['MITRA', 'SEHAT', 'MEDIKA'];
+    document.getElementById('fileInput').addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      
+
+      // Show loading message
+      document.getElementById('output').textContent = "Processing...";
+
+      try {
+        const { data: { text } } = await Tesseract.recognize(
+          file,
+          'eng', // Change to 'ind' for Indonesian, etc.
+          {
+            logger: m => {
+                        if (m.status === 'recognizing text') {
+                            document.getElementById('output').textContent = `Recognizing: ${Math.round(m.progress * 100)}%`;
+                            console.log(m)
+                        }
+                    }
+          }
+        );
+        document.getElementById('output').textContent = text;
+        // Example: Extract specific fields
+            const customer = extractField(text, 'Customer');
+            const ekspedisi = extractField(text, 'Ekspedisi');
+            const dm = extractField(text, 'DM #');
+            const nopol = extractField(text, 'NOPOL');
+            const supir = extractField(text, 'Nama Sopir');
+
+            console.log("\n--- Extracted Fields ---");
+            console.log("Customer:", customer || "Not found");
+            console.log("Ekspedisi:", ekspedisi || "Not found");
+            console.log("No DN:", dm || "Not found");
+            console.log("No Pol:", nopol || "Not found");
+            console.log("Nama:", supir || "Not found");
+          /*
+        const foundWords = targetWords.filter(word =>
+            new RegExp(`\\b${word}\\b`, 'i').test(text)
+        );
+
+        console.log('\n--- Detected Keywords ---');
+        if (foundWords.length > 0) {
+            console.log(foundWords.join(', '));
+        } else {
+            console.log('No target words found.');
+        }
+            */
+      } catch (err) {
+        document.getElementById('output').textContent = "Error: " + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

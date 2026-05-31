@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Finish Good IKK</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Finished Goods IKK" />
+    <meta name="keywords" content="Indah Kiat Pulp & Paper" />
+    <meta name="author" content="FG Team Work" />
+    <!-- Favicon icon -->
+    
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Notification.css -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+    <div class="container-loader" x-init x-show="$store.globVar.isLoading"  x-transition.duration.300ms>
+    <div class="custom-loader"></div>
+    </div>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="index.html">
+                          <img class="img-fluid" src="assets/images/app-logo.png" alt="APP Logo" />
+                      </a>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                     
+                      <ul class="nav-right">
+                          <li class="header-notification">
+                              
+                          </li>
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/avatar-blank.jpg" class="img-radius" alt="User-Profile-Image">
+                                  <span x-data x-text="getUserObject().data.FullName">User</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="logout.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+    
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                
+
+                <!-- Start Sidebar -->
+
+                <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                        <div class="p-15 p-b-0">    
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+                          <ul class="pcoded-item pcoded-left-item">
+                              <li class="active">
+                                  <a href="index.html" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                          </ul>
+                          <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-package"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Selongsong</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Stock</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="incomingselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataincoming.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="postingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Posting Accounting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="datapostingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Posting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-truck"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Delivery</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        
+                                        <li>
+                                            <a href="inputtruck.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Daftar Truck</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=antri" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Antri Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=proses" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Proses Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=selesai" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Selesai Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=gi" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Good Issue</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=batal" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Batal Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="deliveryscore.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Score Board</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="reportdelivery.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Report</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="inputexport.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Planning Export</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Berita Acara</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputberitaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="databeritaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Roll List</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="emailrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Email Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="uploadrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Upload Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                  </nav>
+
+                <!-- End Sidebar -->
+
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page body start -->
+                                <div class="page-body button-page">
+                                    <div class="row">
+                                        <!-- bootstrap modal start -->
+                                        <div class="col-sm-12">
+                                            <!-- Notification card start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Email Roll List</h5>
+                                                </div>
+                                                <div class="card-block">
+                                                     <form x-data="emailRollList()" @submit.prevent="">
+                                                         <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label">No DN</label>
+                                                            <div class="col-sm-2">
+                                                                    <input id="txt_noDN" type="text" class="form-control" x-model="dataForm.noDN">
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <button type="button" @click="checkDN()" class="btn btn-primary btn-sm mb-0 mt-0">Cek DN</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label">Nama Penerima</label>
+                                                            <div class="col-sm-3">
+                                                                <input id="txt_nama" type="text" class="form-control" x-model="dataForm.nama">
+                                                            </div>
+                                                            <label class="col-sm-2 col-form-label">Alamat Email</label>
+                                                            <div class="col-sm-5">
+                                                                <input type="text" class="form-control" x-model="dataForm.email">
+                                                            </div>
+                                                        </div>
+
+                                                        <h3>Roll List</h3>
+                                                        <div class="form-group row">
+                                                            <div class="table-responsive pl-2 pr-2 pt-2">
+                                                                <table class="table table-hover table-striped table-fixed">
+                                                                    <thead>                                                                       
+                                                                        <tr class="bg-primary">
+                                                                            <td>No</td>
+                                                                            <td>Plant</td>
+                                                                            <td>Roll Id</td>
+                                                                            <td>SAP Material ID</td>
+                                                                            <td>Sales Description</td>
+                                                                            <td>SAP Description</td>
+                                                                            <td>No DN</td>
+                                                                            <td>DN Item</td>
+                                                                            <td>No SO</td>
+                                                                            <td>SO Item</td>
+                                                                            <td>Diameter</td>
+                                                                            <td>Core Dia.</td>
+                                                                            <td>Weight</td>
+                                                                            <td>GSM</td>
+                                                                            <td>Length</td>
+                                                                            <td>Production Date</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <template x-for="(detailRoll,index) in dataForm.packingList" >
+                                                                            <tr>
+                                                                            <td x-text="index+1"></td>
+                                                                            <td x-text="detailRoll.Plant"></td>
+                                                                            <td x-text="detailRoll.UnitID"></td>
+                                                                            <td x-text="detailRoll.MaterialNumber"></td>
+                                                                            <td x-text="detailRoll.MaterialDescription"></td>
+                                                                            <td x-text="detailRoll.MaterialDescriptionLong"></td>
+                                                                            <td x-text="detailRoll.DeliveryNote"></td>
+                                                                            <td x-text="detailRoll.DN_Item"></td>
+                                                                            <td x-text="detailRoll.SalesOrder"></td>
+                                                                            <td x-text="detailRoll.SO_Item"></td>
+                                                                            <td x-text="detailRoll.RollDiameter"></td>
+                                                                            <td x-text="detailRoll.CoreDiameter"></td>
+                                                                            <td x-text="detailRoll.Weight"></td>
+                                                                            <td x-text="detailRoll.GSM"></td>
+                                                                            <td x-text="detailRoll.Length"></td>
+                                                                            <td x-text="detailRoll.ProductionDate"></td>
+                                                                            </tr>
+                                                                        </template>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button type="button" x-bind:disabled="submitDisable" @click="submitForm()" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Kirim</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <!-- Notification card end -->
+                                        </div>
+                                        <!-- Bootstrap modal end -->
+                                    </div>
+                                    
+                                <!-- Page body end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main-body end -->
+                
+                <div id="styleSelector">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                            
+        
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- notification js -->
+<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="assets/pages/notification/notification.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/vertical-layout.min.js "></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.15.0/cdn.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+
+    <script type="text/javascript" src="assets/js/backend.js "></script>
+    <script type="text/javascript" src="assets/js/functionIKK.js "></script>
+    <script type="text/javascript" src="assets/js/auth.js "></script>
+ 
+    <script>
+        function emailRollList() {
+            return {
+                submitDisable: true,
+                dataForm: {
+                    email: "",
+                    noDN: "",
+                    nama: "",
+                    packingList: []
+                },
+                clearForm(){
+                    this.dataForm.email = "",
+                    this.dataForm.noDN =  "",
+                    this.dataForm.nama = "",
+                    this.dataForm.packingList = []
+                },
+                async checkDN(){
+                   try {
+                        Alpine.store('globVar').isLoading = true
+                        const response = await fetch(serverHosting + `/packinglist/dn/${this.dataForm.noDN}`, {
+                            method: 'GET',
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        // Check if HTTP status is OK (200–299)
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+
+                        // Parse JSON
+                        const data = await response.json();
+                        console.log('Fetched JSON:', data);
+                        if(data.length <= 0){
+                                    notify(`No DN ${this.dataForm.noDN} tidak ditemukan`, 'danger');
+                                    throw new Error(`No DN ${this.dataForm.noDN} tidak ditemukan`);
+                        }
+                        this.dataForm.packingList = data
+                        this.submitDisable = false
+                        return data;
+                    } catch (error) {
+                        console.error('Error fetching JSON:', error.message);
+                        return null; // Return null on error
+                    } finally {
+                            Alpine.store('globVar').isLoading = false
+                    }
+
+                },
+                async submitForm(){
+                    //console.log(JSON.stringify(this.dataForm))
+                    Alpine.store('globVar').isLoading = true
+                    await fetch(serverHosting + `/email/packinglist`, {
+                        method: 'POST',
+                        headers: { 
+                                'Content-Type': 'application/json' 
+                        },
+                        body: JSON.stringify(this.dataForm)
+                    })
+                    .then(res => res.json()) 
+                    .then(data => {
+                        console.log(data)
+                        this.submitDisable = true
+                        this.clearForm()
+                    })                    
+                    .catch(error => {
+                        console.error('Error:', error);
+                    })
+                    .finally(() => {
+                        
+                        Alpine.store('globVar').isLoading = false
+                    });
+                    
+                        
+                }
+            }
+        }
+    </script>
+    
+    
+     <script>
+    document.addEventListener('alpine:init', () => {
+            Alpine.store('globVar', {
+                  isLoading: false,
+                  isShow: false,
+                  toggleIsShow(){
+                     this.isShow = !this.isShow
+                  }
+            });
+         });
+    </script>
+
+    
+</body>
+
+</html>

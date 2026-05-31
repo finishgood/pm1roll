@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Finish Good IKK</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Finished Goods IKK" />
+    <meta name="keywords" content="Indah Kiat Pulp & Paper" />
+    <meta name="author" content="FG Team Work" />
+    <!-- Favicon icon -->
+    
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Notification.css -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+</head>
+
+<body>
+    
+    <div class="container-loader" x-init x-show="$store.globVar.isLoading"  x-transition.duration.300ms>
+    <div class="custom-loader"></div>
+    </div>
+
+
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="index.html">
+                          <img class="img-fluid" src="assets/images/app-logo.png" alt="APP Logo" />
+                      </a>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                     
+                      <ul class="nav-right">
+                          <li class="header-notification">
+                              
+                          </li>
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/avatar-blank.jpg" class="img-radius" alt="User-Profile-Image">
+                                  <span x-data x-text="getUserObject().data.FullName">User</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="logout.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+    
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                
+
+                <!-- Start Sidebar -->
+
+                <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                        <div class="p-15 p-b-0">    
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+                          <ul class="pcoded-item pcoded-left-item">
+                              <li class="active">
+                                  <a href="index.html" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                          </ul>
+                          <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-package"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Selongsong</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pemakaian</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Stock</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="incomingselongsong.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dataincoming.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Penerimaan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="postingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Posting Accounting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="datapostingaccounting.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Posting</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-truck"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Delivery</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        
+                                        <li>
+                                            <a href="inputtruck.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Daftar Truck</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=antri" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Antri Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=proses" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Proses Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=selesai" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Selesai Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="datadelivery.html?status=gi" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Good Issue</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=batal" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Batal Muat</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="deliveryscore.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Score Board</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="reportdelivery.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Report</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="inputexport.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Planning Export</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Berita Acara</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="inputberitaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Input Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="databeritaacara.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Data Pengecekan</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-book"></i></span>
+                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Roll List</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    <ul class="pcoded-submenu">
+                                        <li>
+                                            <a href="emailrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Email Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="uploadrolllist.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.form-components.main">Upload Roll List</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                  </nav>
+
+                <!-- End Sidebar -->
+
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page body start -->
+                                <div class="page-body button-page"
+                                x-data="getDelivery()"
+                                x-init="getData"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Staying time today</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row">
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+                                                                                <h6 class="text-muted m-b-0">Average</h6>
+                                                                                <h5 class="text-success" x-text="convertTimeToDurasi(avgGI)">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-success" x-text="convertTimeToDurasi(minMuat.DurasiGI)">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terlama</h6>
+                                                                                <h5 class="text-success pb-2" x-text="convertTimeToDurasi(maxMuat.DurasiGI)">0</h5>
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-flag f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-success">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Goods Issue</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+                                                                                <h6 class="text-muted m-b-0">Average</h6>
+                                                                                <h5 class="text-c-purple" x-text="convertTimeToDurasi(avgMuat)">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-c-purple" x-text="convertTimeToDurasi(minMuat.DurasiMuat)">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terlama</h6>
+                                                                                <h5 class="text-c-purple pb-2" x-text="convertTimeToDurasi(maxMuat.DurasiMuat)">0</h5>
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-truck f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-c-purple">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Stuffing</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Top Score</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row">
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-success" x-text="firstDurasiGI.KetDurasiGI">0</h5>
+                                                                                <h6 class="text-muted m-b-0" x-text="firstDurasiGI.OperatorGI"></h6>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terbanyak</h6>
+                                                                                <h5 class="text-success" x-text="firstTransaksiGI.JumlahTransaksi+' Mobil'">0</h5>
+                                                                                <h6 class="text-muted m-b-0 pb-2" x-text="firstTransaksiGI.OperatorGI"></h6>
+
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-flag f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-success">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Goods Issue</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-c-purple" x-text="firstDurasiMuat.KetDurasiMuat">0</h5>
+                                                                                <h6 class="text-muted m-b-0" x-text="firstDurasiMuat.OperatorSelesai"></h6>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terbanyak</h6>
+                                                                                <h5 class="text-c-purple" x-text="firstTransaksiMuat.JumlahTransaksi+' Mobil'">0</h5>
+                                                                                <h6 class="text-muted m-b-0 pb-2" x-text="firstTransaksiMuat.OperatorSelesai"></h6>
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-truck f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-c-purple">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Stuffing</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>My Score</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row">
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+                                                                                
+                                                                                <h6 class="text-muted m-b-0">Average</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terlama</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Jumlah</h6>
+                                                                                <h5 class="text-success">0</h5>
+
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-flag f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-success">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Goods Issue</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                                                <div class="card">
+                                                                    <div class="card-block">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-8">
+
+                                                                                <h6 class="text-muted m-b-0">Average</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Tercepat</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Terlama</h6>
+                                                                                <h5 class="text-success">0</h5>
+                                                                                <hr />
+                                                                                <h6 class="text-muted m-b-0">Jumlah</h6>
+                                                                                <h5 class="text-success">0</h5>
+
+                                                                            </div>
+                                                                            <div class="col-4 text-right">
+                                                                                <i class="fa fa-truck f-28"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer bg-c-purple">
+                                                                        <div class="row align-items-center">
+                                                                            <div class="col-9">
+                                                                                <h4 class="text-white m-b-0">Stuffing</h4>
+                                                                            </div>
+                                                                            <div class="col-3 text-right">
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    
+                                
+                                
+                                
+                                
+                                </div>  
+                                <!-- Page body end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main-body end -->
+                
+                <div id="styleSelector">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                            
+ <script>
+    function getDelivery(){
+            return {
+                templateQueryFilter: {
+                    structuredQuery: {
+                        select: { 
+                            fields: [
+                                {
+                                "fieldPath": "NoIML"
+                                },{
+                                "fieldPath": "Status"
+                                },{
+                                "fieldPath": "WaktuAntri"
+                                },{
+                                "fieldPath": "WaktuMuat"
+                                },{
+                                "fieldPath": "OperatorSelesai"
+                                },{
+                                "fieldPath": "WaktuSelesai"
+                                },{
+                                "fieldPath": "OperatorGI"
+                                },{
+                                "fieldPath": "WaktuGI"
+                                },
+                            ]
+                        },
+                        from: [{
+                            "collectionId": "stayingtime",
+                            "allDescendants": true
+                        }],
+                        "where": {
+                            "compositeFilter" : {
+                                "op": "AND",
+                                "filters": [
+                                    {
+                                    "fieldFilter": {
+                                        "field": {
+                                            "fieldPath": "WaktuAntri"
+                                        },
+                                        "op": "LESS_THAN_OR_EQUAL",
+                                        "value": {
+                                            "timestampValue": subtractHours(getTomorrow(1),7).toISOString()
+                                        }
+                                    }},
+                                    {"fieldFilter": {
+                                        "field": {
+                                            "fieldPath": "WaktuAntri"
+                                        },
+                                        "op": "GREATER_THAN_OR_EQUAL",
+                                        "value": {
+                                            "timestampValue": subtractHours(getYesterday(0),7).toISOString()
+                                        }
+                                    }},
+                                    {"fieldFilter": {
+                                        "field": {
+                                            "fieldPath": "Status"
+                                        },
+                                        "op": "EQUAL",
+                                        "value": {
+                                            "stringValue": "gi"
+                                        }
+                                    }},
+                                ]
+                            }  
+                        },
+                        "orderBy": [
+                            {
+                            "field": {
+                                    "fieldPath": "WaktuAntri"
+                                },
+                                "direction": "DESCENDING"
+                            }
+                        ]
+                    }
+                }, 
+                queryFilter: {},           
+                dataDelivery: [],
+                dataAntri: [],
+                dataProses: [],
+                dataSelesai: [],
+                dataGI: [],
+                dataMyScore: [],
+                dataBatal: [],
+                dataYesterday: [],
+                firstDurasiMuat: [],
+                firstDurasiGI: [],
+                firstTransaksiMuat: [],
+                firstTransaksiGI: [],
+                avgMuat: 0,
+                avgGI: 0,
+                minMuat: 0,
+                minGI: 0,
+                maxMuat: 0,
+                maxGI: 0,
+                dateFrom: "",
+                dateTo: "",
+                getData(){
+                    
+                    fetch(`https://firestore.googleapis.com/v1/projects/fg-ikk/databases/(default)/documents:runQuery`, {
+                        method: 'POST',
+                        headers: { 
+                                //'Authorization': `Bearer ${getToken()}`,
+                                'Content-Type': 'application/json' 
+                        },
+                        body: JSON.stringify(this.templateQueryFilter)
+                    })
+                    .then((res) => {
+                        //console.log(res) 
+                        return res.json()
+                        
+                    }) 
+                    .then(data => {
+                        
+
+                        filteredArray = data.map((item,index) => {
+                        return {
+                            name : item.document.name.split('/').pop(),
+                            Status: item.document.fields.Status.stringValue,
+                            NoIML: item.document.fields.NoIML.integerValue,
+                            WaktuAntri: item.document.fields.WaktuAntri.timestampValue,
+                            WaktuMuat: item.document.fields.WaktuMuat.timestampValue,
+                            WaktuSelesai: item.document.fields.WaktuSelesai.timestampValue,
+                            WaktuGI: item.document.fields.WaktuGI.timestampValue,
+                            OperatorSelesai: item.document.fields.OperatorSelesai.stringValue,
+                            OperatorGI: item.document.fields.OperatorGI.stringValue,
+                            DurasiMuat: new Date(item.document.fields.WaktuSelesai.timestampValue) - new Date(item.document.fields.WaktuMuat.timestampValue),
+                            DurasiGI: new Date(item.document.fields.WaktuGI.timestampValue) - new Date(item.document.fields.WaktuSelesai.timestampValue),
+                            KetDurasiMuat: hitungDurasi(new Date(item.document.fields.WaktuMuat.timestampValue),new Date(item.document.fields.WaktuSelesai.timestampValue)),
+                            KetDurasiGI: hitungDurasi(new Date(item.document.fields.WaktuSelesai.timestampValue),new Date(item.document.fields.WaktuGI.timestampValue))
+                                }
+
+                        })
+
+                        
+                        this.dataGI = filteredArray.filter(item => {
+                            let tanggal = new Date(dateYMD(item.WaktuAntri)).getTime() ;
+                            return tanggal >= new Date(dateYMD(hariIni())).getTime() &&
+                            tanggal <= new Date(getTomorrow(1)).getTime() 
+                        });
+
+                        this.dataMyScore = this.dataGI.filter(item => {
+                            return item.OperatorGI ==  getUserObject().data.FullName || item.OperatorSelesai == getUserObject().data.FullName
+                        });
+
+                        
+
+                        this.dataGI.sort((a, b) => a.DurasiSelesai - b.DurasiSelesai);
+                        this.dataSelesai = this.dataGI.sort((a, b) => a.DurasiMuat - b.DurasiMuat);
+                        this.firstDurasiMuat = this.dataSelesai[Object.keys(this.dataSelesai)[0]];
+                        this.firstDurasiGI = this.dataSelesai[Object.keys(this.dataSelesai)[0]];
+
+                        const dataGIGroupByOperator = Object.groupBy(this.dataGI, (gi) => gi.OperatorGI); 
+                        const dataSelesaiGroupByOperator = Object.groupBy(this.dataSelesai, (muat) => muat.OperatorSelesai); 
+
+                        const GISummary = Object.entries(dataGIGroupByOperator).map(([OperatorGI, items]) => {
+                            const JumlahTransaksi = items.length;
+                            return {
+                                OperatorGI,
+                                JumlahTransaksi
+                            };
+                            });
+
+                        const SelesaiSummary = Object.entries(dataSelesaiGroupByOperator).map(([OperatorSelesai, items]) => {
+                            const JumlahTransaksi = items.length;
+                            return {
+                                OperatorSelesai,
+                                JumlahTransaksi
+                            };
+                            });
+                        
+                        
+                        GISummary.sort((a, b) => b.JumlahTransaksi - a.JumlahTransaksi);
+                        SelesaiSummary.sort((a, b) => b.JumlahTransaksi - a.JumlahTransaksi);
+
+                        this.firstTransaksiMuat = SelesaiSummary[Object.keys(SelesaiSummary)[0]];
+                        this.firstTransaksiGI = GISummary[Object.keys(GISummary)[0]];
+                        
+                        this.avgMuat = this.dataSelesai.reduce((acc, val) => acc + val.DurasiMuat, 0) / this.dataGI.length;
+                        this.avgGI = this.dataGI.reduce((acc, val) => acc + val.DurasiGI, 0) / this.dataGI.length;
+
+                        this.minMuat = getMinObject(this.dataSelesai,"DurasiMuat")
+                        this.minGI = getMinObject(this.dataSelesai,"DurasiGI")
+                        this.maxMuat = getMaxObject(this.dataSelesai,"DurasiMuat")
+                        this.maxGI = getMaxObject(this.dataSelesai,"DurasiGI")
+                        
+
+                        this.dataDelivery = filteredArray
+                        console.log( this.dataMyScore);
+                    })                    
+                    .catch(error => {
+                        console.error('Error:', error);
+                        
+                        
+                        // Tangani error di sini
+                    })
+                    .finally(() => {
+                        
+                    });
+                }
+            }
+
+        }
+ </script>       
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- notification js -->
+<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="assets/pages/notification/notification.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/vertical-layout.min.js "></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.15.0/cdn.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+
+    <script type="text/javascript" src="assets/js/firestore.js "></script>
+    <script type="text/javascript" src="assets/js/backend.js "></script>
+    <script type="text/javascript" src="assets/js/functionIKK.js "></script>
+    <script type="text/javascript" src="assets/js/auth.js "></script>
+    <script>
+         document.addEventListener('alpine:init', () => {
+            Alpine.store('globVar', {
+                  isLoading: false,
+                  isShow: false,
+                  toggleIsShow(){
+                     this.isShow = !this.isShow
+                  }
+            });
+         });
+    </script>
+
+</body>
+
+</html>

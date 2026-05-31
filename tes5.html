@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alpine.js + Tesseract.js Camera OCR</title>
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<style>
+  video, canvas { max-width: 100%; border: 1px solid #ccc; }
+  pre { background: #f4f4f4; padding: 10px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+
+<div x-data="ocrApp()" x-init="initCamera()">
+  <h1>📷 Camera OCR with Alpine.js + Tesseract.js</h1>
+
+  <!-- Live camera preview -->
+  <video x-ref="video" autoplay playsinline></video>
+  <br>
+
+  <!-- Capture button -->
+  <button @click="captureFrame" :disabled="loading">
+    {{ loading ? 'Processing...' : 'Capture & Recognize' }}
+  </button>
+
+  <!-- Canvas (hidden) for frame capture -->
+  <canvas x-ref="canvas" style="display:none;"></canvas>
+
+  <!-- OCR result -->
+  <h2>Recognized Text:</h2>
+  <pre x-text="ocrText || 'No text recognized yet.'"></pre>
+</div>
+
+<script>
+function ocrApp() {
+  return {
+    video: null,
+    canvas: null,
+    ocrText: '',
+    loading: false,
+
+    async initCamera() {
+      try {
+        this.video = this.$refs.video;
+        this.canvas = this.$refs.canvas;
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        this.video.srcObject = stream;
+      } catch (err) {
+        alert('Error accessing camera: ' + err.message);
+      }
+    },
+
+    async captureFrame() {
+      if (!this.video) return;
+      this.loading = true;
+      this.ocrText = '';
+
+      // Draw current video frame to canvas
+      const ctx = this.canvas.getContext('2d');
+      this.canvas.width = this.video.videoWidth;
+      this.canvas.height = this.video.videoHeight;
+      ctx.drawImage(this.video, 0, 0);
+
+      // Convert canvas to image data URL
+      const imageData = this.canvas.toDataURL('image/png');
+
+      try {
+        // Run OCR with Tesseract.js
+        const result = await Tesseract.recognize(imageData, 'eng', {
+          logger: m => console.log(m) // progress logs
+        });
+        this.ocrText = result.data.text.trim();
+      } catch (err) {
+        this.ocrText = 'OCR Error: ' + err.message;
+      } finally {
+        this.loading = false;
+      }
+    }
+  };
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tesseract.js OCR from Camera</title>
+<style>
+  video, canvas, img { max-width: 100%; margin: 10px 0; }
+</style>
+</head>
+<body>
+<h2>Take Photo & Extract Text with Tesseract.js</h2>
+
+<!-- Camera preview -->
+<video id="video" autoplay playsinline></video><br>
+<button id="captureBtn">📸 Capture Photo</button>
+
+<!-- Captured image -->
+<canvas id="canvas" style="display:none;"></canvas>
+<img id="photo" alt="Captured Image"><br>
+
+<!-- OCR result -->
+<pre id="output">Text will appear here...</pre>
+
+<!-- Tesseract.js -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+
+// Function to extract a specific field from OCR text
+function extractField(text, fieldName) {
+    // Example: Extract "Invoice Number: 12345"
+    const regex = new RegExp(`${fieldName}\\s*[:\\-]?\\s*(.+)`, 'i');
+    const match = text.match(regex);
+    return match ? match[1].trim() : null;
+}
+
+(async function() {
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const photo = document.getElementById('photo');
+    const output = document.getElementById('output');
+    const captureBtn = document.getElementById('captureBtn');
+
+    // Request camera access
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }, // back camera
+            audio: false });
+        video.srcObject = stream;
+    } catch (err) {
+        alert("Camera access denied or not available.");
+        console.error(err);
+        return;
+    }
+
+    // Capture photo and run OCR
+    captureBtn.addEventListener('click', async () => {
+        // Draw video frame to canvas
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0);
+
+        // Show captured image
+        const dataUrl = canvas.toDataURL('image/png');
+        photo.src = dataUrl;
+
+        output.textContent = "Processing OCR... Please wait.";
+
+        try {
+            const result = await Tesseract.recognize(dataUrl, 'eng', {
+                logger: m => console.log(m) // progress log
+            });
+            output.textContent = result.data.text.trim() || "No text detected.";
+            // Example: Extract specific fields
+            const invoiceNumber = extractField(text, 'Invoice Number');
+            const date = extractField(text, 'Date');
+
+            console.log("\n--- Extracted Fields ---");
+            console.log("Invoice Number:", invoiceNumber || "Not found");
+            console.log("Date:", date || "Not found");
+        } catch (err) {
+            output.textContent = "Error during OCR.";
+            console.error(err);
+        }
+    });
+})();
+</script>
+</body>
+</html>
