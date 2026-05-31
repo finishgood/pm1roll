@@ -1,7 +1,7 @@
 import {getUser,getToken,getUserObject} from "./helperIKK.js"
 
 function getServer(){
-    return "https://fg-ikk.my.id/proxy/app_mls_service"
+    return "https://fgd.my.id/proxy/app_mls_service"
     //return "https://fg-ikk.my.id"
 }
 
