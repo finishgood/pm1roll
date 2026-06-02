@@ -13,6 +13,10 @@ function isEmptyObject(obj) {
   return Object.keys(obj).length === 0;
 }
 
+function cekExist(data){
+    return typeof data !== 'undefined' && data ? data[0].total  : 0;
+}
+
 const fetchPlus = (url, options = {}, retries) =>
   fetch(url, 
         Object.assign(options,
