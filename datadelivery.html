@@ -227,6 +227,14 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=yesterday" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">DN Yesterday</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
                                         
                            
                                     </ul>
@@ -444,6 +452,9 @@
         let url = serverHosting + "/deliveryIML/list_status/PM1Roll"
         if(getStatus){
             url=serverHosting + "/deliveryIML/list_status/PM1Roll/"+getStatus
+            if(getStatus=="yesterday"){
+                url=serverHosting + "/deliveryIML/yesterday/PM1Roll/dn"
+            }
             Alpine.store('globVar').tableTitle = getStatus
         }
 
@@ -515,6 +526,7 @@
                   isAntri: false,
                   isProses: false,
                   isSelesai: false,
+                  isYesterday: false,
                   isGI: false,
                   isBatal: false,
                   tableTitle: "",
@@ -537,6 +549,9 @@
             break;
         case "dn":
             Alpine.store('globVar').tableTitle = "Surat Jalan"
+            break;
+        case "yesterday":
+            Alpine.store('globVar').tableTitle = "Surat Jalan Yesterday"
             break;
         case "batal":
             Alpine.store('globVar').tableTitle = "Batal Muat"
