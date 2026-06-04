@@ -316,27 +316,27 @@
                                                                     <button @click="clickButton('daftar')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-lite-green text-white mt-1 mb-1">Daftar</button>
                                                                     </th>
                                                                         
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri__local)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri__export)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri__local)+cekExist(dataDashboard.data.yesterday.antri__local)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri__export)+cekExist(dataDashboard.data.yesterday.antri__export)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.antri)+cekExist(dataDashboard.data.yesterday.antri)">&nbsp;</h5></th>
                                                                 </tr>
                                                                 <tr>
                                                                     <th class=" align-middle">Proses Muat &nbsp; <a href="datadelivery.html?status=proses"><i class="fa fa-external-link text-c-blue f-16"></i></a>
                                                                     <br /><br />
                                                                     <button @click="clickButton('proses')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-info mt-1 mb-1">Proses</button>
                                                                     </th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses__local)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses__export)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses__local)+cekExist(dataDashboard.data.yesterday.proses__local)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses__export)+cekExist(dataDashboard.data.yesterday.proses__export)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.proses)+cekExist(dataDashboard.data.yesterday.proses)">&nbsp;</h5></th>
                                                                 </tr>
                                                                 <tr>
                                                                     <th class=" align-middle">Selesai Muat &nbsp; <a href="datadelivery.html?status=selesai"><i class="fa fa-external-link text-c-blue f-16"></i></a>
                                                                     <br /><br />
                                                                         <button  @click="clickButton('selesai')" data-toggle="modal" data-target="#modalScanBarcode" class="btn btn-primary mt-1 mb-1">Selesai Muat</button>
                                                                     </th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai__local)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai__export)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai__local)+cekExist(dataDashboard.data.yesterday.selesai__local)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai__export)+cekExist(dataDashboard.data.yesterday.selesai__export)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.selesai)+cekExist(dataDashboard.data.yesterday.selesai)">&nbsp;</h5></th>
                                                                 </tr>
                                                                 <tr>
                                                                     <th class=" align-middle">Surat Jalan &nbsp; <a href="datadelivery.html?status=dn"><i class="fa fa-external-link text-c-blue f-16"></i></a>
