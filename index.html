@@ -245,6 +245,23 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
+
+                                        <li>
+                                            <a href="datadelivery.html?status=yesterday" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">DN Yesterday</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                        
+                                        <li>
+                                            <a href="realisasi.html" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Realisasi</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
                                         
                            
                                     </ul>
@@ -302,15 +319,6 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <th class=" align-middle">Yesterday &nbsp;
-                                                                     <a href="datadelivery.html?status=yesterday"><i class="fa fa-external-link text-c-blue f-16"></i>
-                                                                    </th>
-                                                                        
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__local)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__export)">&nbsp;</h5></th>
-                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__local)+cekExist(dataDashboard.data.yesterday.dn__export)">&nbsp;</h5></th>
-                                                                </tr>
-                                                                <tr>
                                                                     <th class=" align-middle">Antri Muat &nbsp; <a href="datadelivery.html?status=antri"><i class="fa fa-external-link text-c-blue f-16"></i></a>
                                                                     <br /><br />
                                                                     <button @click="clickButton('daftar')" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-lite-green text-white mt-1 mb-1">Daftar</button>
@@ -355,6 +363,15 @@
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal__local)">&nbsp;</h5></th>
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal__export)">&nbsp;</h5></th>
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal)">&nbsp;</h5></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class=" align-middle">Yesterday &nbsp;
+                                                                     <a href="datadelivery.html?status=yesterday"><i class="fa fa-external-link text-c-blue f-16"></i>
+                                                                    </th>
+                                                                        
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__local)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__export)">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.yesterday.dn__local)+cekExist(dataDashboard.data.yesterday.dn__export)">&nbsp;</h5></th>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
