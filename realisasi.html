@@ -342,6 +342,7 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
+                                                        <button  @click="updateData()" data-toggle="modal" data-target="#modalScanBarcode" class="btn bg-c-purple text-white mt-1 mb-1">Update Data</button>
                                                     </div>
                                                 </div>
 
@@ -410,6 +411,25 @@
                             headers: {'Content-Type': 'application/json'} })).json()
                         this.dataRealisasi = data
                         console.log(this.dataRealisasi)
+                    }catch(err){
+                        console.log(err)
+                        notify(err,"danger")
+                    }finally{
+                        Alpine.store('globVar').isLoading = false
+                    }
+                        
+                },
+
+                async updateData(){
+                    let url = serverHosting+"/deliveryIML/updatedataiml"
+                    Alpine.store('globVar').isLoading = true
+                    
+                    try{
+                        const data = await (await fetch(url, { method: 'GET', 
+                            headers: {'Content-Type': 'application/json'} })).json()
+                        if(data){
+                            const refreshData = await this.getData()
+                        }
                     }catch(err){
                         console.log(err)
                         notify(err,"danger")
