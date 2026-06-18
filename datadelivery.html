@@ -297,6 +297,7 @@
                                                                         <th>Tujuan</th>
                                                                         <th>Nopol</th>
                                                                         <th>Nama Driver</th>
+                                                                        <th x-show="(getParameter('status')=='dn')">Durasi Antri</th>
                                                                         <th x-show="(getParameter('status')=='dn')">Durasi Muat</th>
                                                                         <th x-show="(getParameter('status')=='dn')">Durasi DN</th>
                                                                         <th>Status</th>
@@ -315,6 +316,7 @@
                                                                             <td x-text="delivery.Tujuan"></td>
                                                                             <td x-text="delivery.Nopol"></td>
                                                                             <td x-text="delivery.NamaSupir"></td>
+                                                                            <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuAntri,delivery.WaktuProses)"></td>
                                                                             <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuProses,delivery.WaktuSelesai)"></td>
                                                                             <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuSelesai,delivery.WaktuDN)"></td>
                                                                             <td x-text="delivery.Status"></td>
