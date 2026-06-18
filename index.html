@@ -682,6 +682,7 @@
                             headers: {'Content-Type': 'application/json'},
                             body: JSON.stringify({ 
                                 NoIML: parseInt(this.txtBarcode), 
+                                Operator: getUserObject().data.FullName,
                                 Warehouse: "PM1Roll" }) })).json()
                             if(data.success == true){
                                 notify("Pendaftaran Berhasil IML "+this.txtBarcode,"success")

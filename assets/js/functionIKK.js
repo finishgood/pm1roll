@@ -156,6 +156,21 @@ function addHours(date, hours) {
   return date;
 }
 
+function getHHMMDiff(date1, date2) {
+  // Get absolute difference in milliseconds
+  const diffMs = Math.abs(new Date(date2) - new Date(date1)); 
+  
+  // Calculate total hours and remaining minutes
+  const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const remainingMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+  
+  // Pad with leading zeros if they are single digits
+  const hh = String(totalHours).padStart(2, '0');
+  const mm = String(remainingMinutes).padStart(2, '0');
+  
+  return `${hh}:${mm}`;
+}
+
 function groupSelongsongByEkspedisi(dataSelongsong){
 
     filteredArray = dataSelongsong.map((item,index) => {
