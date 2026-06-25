@@ -683,7 +683,8 @@
                             body: JSON.stringify({ 
                                 NoIML: parseInt(this.txtBarcode), 
                                 Operator: getUserObject().data.FullName,
-                                Warehouse: "PM1Roll" }) })).json()
+                                Warehouse: "PM1Roll",
+                                WAMessages: true }) })).json()
                             if(data.success == true){
                                 notify("Pendaftaran Berhasil IML "+this.txtBarcode,"success")
                                 this.clearForm()
