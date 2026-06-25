@@ -297,9 +297,10 @@
                                                                         <th>Tujuan</th>
                                                                         <th>Nopol</th>
                                                                         <th>Nama Driver</th>
-                                                                        <th x-show="(getParameter('status')=='dn')">Durasi Antri</th>
-                                                                        <th x-show="(getParameter('status')=='dn')">Durasi Muat</th>
-                                                                        <th x-show="(getParameter('status')=='dn')">Durasi DN</th>
+                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Durasi</th>
+                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Waktu Proses</th>
+                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Waktu Selesai</th>
+                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Waktu DN</th>
                                                                         <th>Status</th>
                                                                         <th>Waktu Antri</th>
                                                                         <th>DN</th>
@@ -316,9 +317,10 @@
                                                                             <td x-text="delivery.Tujuan"></td>
                                                                             <td x-text="delivery.Nopol"></td>
                                                                             <td x-text="delivery.NamaSupir"></td>
-                                                                            <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuAntri,delivery.WaktuProses)"></td>
-                                                                            <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuProses,delivery.WaktuSelesai)"></td>
-                                                                            <td x-show="(getParameter('status')=='dn')" x-text="getHHMMDiff(delivery.WaktuSelesai,delivery.WaktuDN)"></td>
+                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="getHHMMDiff(delivery.WaktuAntri,delivery.WaktuDN)"></td>
+                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="formatTanggalIndonesia(delivery.WaktuProses)"></td>
+                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="formatTanggalIndonesia(delivery.WaktuSelesai)"></td>
+                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="formatTanggalIndonesia(delivery.WaktuDN)"></td>
                                                                             <td x-text="delivery.Status"></td>
                                                                             <td x-text="formatTanggalIndonesia(delivery.WaktuAntri)"></td>
                                                                             <td x-text="delivery.NoDN"></td>
