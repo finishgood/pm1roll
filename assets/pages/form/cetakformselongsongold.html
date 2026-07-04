@@ -78,7 +78,7 @@
     getData(getID)
 
     async function getData(id) {
-    const url = "https://fgd.my.id/iml/nomor/"+id;
+    const url = "https://firestore.googleapis.com/v1/projects/fg-ikk/databases/(default)/documents/selongsong/"+id;
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -86,19 +86,19 @@
         }
         const month = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
         const result = await response.json();
-        let tanggal = new Date(result.data.TglDelivery)
+        let tanggal = new Date(result.fields.Tanggal.timestampValue)
         const formattedDate = `${tanggal.getDate()}-${month[tanggal.getMonth()]}-${tanggal.getFullYear()}`
         console.log(formattedDate);
         document.getElementById("nomor").innerHTML = id
-        document.getElementById("nama").innerHTML = result.data.NamaSupir
-        document.getElementById("namattd").innerHTML = result.data.NamaSupir
-        document.getElementById("nopol").innerHTML = result.data.Nopol
-        document.getElementById("iml").innerHTML = result.data.NoIML
-        document.getElementById("dn").innerHTML = result.data.NoDN
-        document.getElementById("ekspedisi").innerHTML = result.data.Ekspedisi
-        document.getElementById("customer").innerHTML = result.data.Customer
-        document.getElementById("qty").innerHTML = result.data.QtySelongsong
-        document.getElementById("ttd").src = "data:image/png;base64,"+result.data.ESignature
+        document.getElementById("nama").innerHTML = result.fields.NamaSupir.stringValue
+        document.getElementById("namattd").innerHTML = result.fields.NamaSupir.stringValue
+        document.getElementById("nopol").innerHTML = result.fields.Nopol.stringValue
+        document.getElementById("iml").innerHTML = result.fields.NoIML.integerValue
+        document.getElementById("dn").innerHTML = result.fields.NoDN.stringValue
+        document.getElementById("ekspedisi").innerHTML = result.fields.Ekspedisi.stringValue
+        document.getElementById("customer").innerHTML = result.fields.Customer.stringValue
+        document.getElementById("qty").innerHTML = result.fields.Qty.integerValue
+        document.getElementById("ttd").src = result.fields.eSign.stringValue
         document.getElementById("tanggal").innerHTML = formattedDate
 
         const element = document.querySelector('#content');
