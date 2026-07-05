@@ -395,7 +395,14 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
+                                                        <div class="form-group row" x-show="(action=='selesai')">
+                                                            <label class="col-sm-3 col-form-label">Qty Pallet</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="number" class="form-control" min="0" x-model="txtQtyPallet" />
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group row">
+                                                            
                                                             <label class="col-sm-3 col-form-label">No IML</label>
                                                             <div class="col-sm-6">
                                                                 <input x-show="txtSetFocus" type="number" id="input" x-ref="input" class="form-control" x-model="txtBarcode" @keydown.enter="document.getElementById('btnAction').click()" />
@@ -548,6 +555,7 @@
                 destination:"",
                 action: "",
                 txtBarcode:"",
+                txtQtyPallet: 0,
                 txtHP:"",
                 result: '',
                 html5QrCode: null,
@@ -608,6 +616,7 @@
                     this.action = ""
                     this.destination = "Local"
                     this.txtBarcode = ""
+                    this.txtQtyPallet = 0
                     this.txtHP = ""
                 },
                 clickButton(aksi){
@@ -684,6 +693,7 @@
                                 NoIML: parseInt(this.txtBarcode), 
                                 Operator: getUserObject().data.FullName,
                                 Warehouse: "PM1Roll",
+                                QtyPallet: parseInt(this.txtQtyPallet), 
                                 WAMessages: true }) })).json()
                             if(data.success == true){
                                 notify("Pendaftaran Berhasil IML "+this.txtBarcode,"success")

@@ -303,6 +303,7 @@
                                                                         <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Waktu DN</th>
                                                                         <th>Status</th>
                                                                         <th>Waktu Antri</th>
+                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Qty Pallet</th>
                                                                         <th>DN</th>
                                                                     </tr>
                                                                 </thead>
@@ -323,6 +324,7 @@
                                                                             <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="formatTanggalIndonesia(delivery.WaktuDN)"></td>
                                                                             <td x-text="delivery.Status"></td>
                                                                             <td x-text="formatTanggalIndonesia(delivery.WaktuAntri)"></td>
+                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="delivery.QtyPallet"></td>
                                                                             <td x-text="delivery.NoDN"></td>
                                                                         </tr>
                                                                     </template>
