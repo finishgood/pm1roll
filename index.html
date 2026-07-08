@@ -401,6 +401,12 @@
                                                                 <input type="number" class="form-control" min="0" x-model="txtQtyPallet" />
                                                             </div>
                                                         </div>
+                                                        <div class="form-group row" x-show="(action=='proses')">
+                                                            <label class="col-sm-3 col-form-label">No Forklift</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" x-model="txtOperatorForklift" />
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group row">
                                                             
                                                             <label class="col-sm-3 col-form-label">No IML</label>
@@ -556,6 +562,7 @@
                 action: "",
                 txtBarcode:"",
                 txtQtyPallet: 0,
+                txtOperatorForklift: "",
                 txtHP:"",
                 result: '',
                 html5QrCode: null,
@@ -612,10 +619,11 @@
                 clearForm(){
                     this.txtSetFocus = false
                     this.actionTitle = ""
-                    this.actionButton = "",
+                    this.actionButton = ""
                     this.action = ""
                     this.destination = "Local"
                     this.txtBarcode = ""
+                    this.txtOperatorForklift = ""
                     this.txtQtyPallet = 0
                     this.txtHP = ""
                 },
@@ -693,6 +701,7 @@
                                 NoIML: parseInt(this.txtBarcode), 
                                 Operator: getUserObject().data.FullName,
                                 Warehouse: "PM1Roll",
+                                OperatorForklift: this.txtOperatorForklift,
                                 QtyPallet: parseInt(this.txtQtyPallet), 
                                 WAMessages: true }) })).json()
                             if(data.success == true){
