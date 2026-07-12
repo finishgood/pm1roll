@@ -190,9 +190,9 @@
                                                                             <td x-text="exportData.QtyDN"></td>
                                                                             <td x-text="exportData.QtyProses"></td>
                                                                             <td :class="exportData.QtyGap > 0 ? 'text-danger' : ''" x-text="exportData.QtyGap"></td>
-                                                                            <td x-text="Number(exportData.QtyPlanMT).toLocaleString('en-US')"></td>
-                                                                            <td x-text="Number(exportData.QtyDNMT).toLocaleString('en-US')"></td>
-                                                                            <td :class="exportData.QtyGapMT > 0 ? 'text-danger' : ''" x-text="Number(exportData.QtyGapMT).toLocaleString('en-US')"></td>
+                                                                            <td x-text="Number(exportData.QtyPlanMT).toLocaleString('en-US', {maximumFractionDigits: 2})"></td>
+                                                                            <td x-text="Number(exportData.QtyDNMT).toLocaleString('en-US', {maximumFractionDigits: 2})"></td>
+                                                                            <td :class="exportData.QtyGapMT > 0 ? 'text-danger' : ''" x-text="Number(exportData.QtyGapMT).toLocaleString('en-US', {maximumFractionDigits: 2})"></td>
                                                                             <td x-text="indoDate(exportData.TglClosing)"></td>
                                                                             <td x-text="exportData.TimeClosing.slice(0, -3)"></td>
                                                                             <td :class="!exportData.PGI ? 'text-danger' : ''" x-text="exportData.PGI"></td>
