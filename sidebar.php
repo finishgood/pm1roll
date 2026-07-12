@@ -27,7 +27,7 @@
                                     <ul class="pcoded-submenu">
 
                                         <li>
-                                            <a href="datadelivery.html?status=antri" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=antri" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Antri Muat</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -35,7 +35,7 @@
                                         </li>
                                         
                                         <li>
-                                            <a href="datadelivery.html?status=proses" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=proses" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Proses Muat</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -43,7 +43,7 @@
                                         </li>
                                         
                                         <li>
-                                            <a href="datadelivery.html?status=selesai" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=selesai" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Selesai Muat</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -51,7 +51,7 @@
                                         </li>
                                         
                                         <li>
-                                            <a href="datadelivery.html?status=dn" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=dn" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Surat Jalan</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -59,7 +59,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="datadelivery.html?status=batal" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=batal" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Batal Muat</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -67,7 +67,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="datadelivery.html?status=yesterday" class="waves-effect waves-dark">
+                                            <a href="datadelivery.php?status=yesterday" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">DN Yesterday</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -76,7 +76,7 @@
 
                                         
                                         <li>
-                                            <a href="realisasi.html" class="waves-effect waves-dark">
+                                            <a href="realisasi.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Realisasi</span>
                                                 <span class="pcoded-mcaret"></span>
