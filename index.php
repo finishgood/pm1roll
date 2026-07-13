@@ -124,7 +124,7 @@
 <div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
-        <?php include "navbar.php"; ?>
+        <?php include "navbar.php" ?>
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
                 
@@ -222,6 +222,14 @@
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal__local)">&nbsp;</h5></th>
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal__export)">&nbsp;</h5></th>
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal)">&nbsp;</h5></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class=" align-middle">Belum Timbang 2
+                                                                    </th>
+                                                                        
+                                                                    <th class="text-center align-middle"> <h5 x-text="dataBelumTimbang2.data.hasOwnProperty('local')?dataBelumTimbang2.data.local.length:0">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="dataBelumTimbang2.data.hasOwnProperty('export')?dataBelumTimbang2.data.export.length:0">&nbsp;</h5></th>
+                                                                    <th class="text-center align-middle"> <h5 x-text="dataBelumTimbang2.data.hasOwnProperty('all')?dataBelumTimbang2.data.all.length:0">&nbsp;</h5></th>
                                                                 </tr>
                                                                 <tr>
                                                                     <th class=" align-middle">Yesterday &nbsp;
@@ -412,6 +420,13 @@
                     batalExport: 0,
                     yesterdayGIExport: 0
                 },
+                dataBelumTimbang2:{
+                    data:{
+                        all:{},
+                        local:{},
+                        export:{}
+                    }
+                },
                 tableExport: [],
                 dataIML:{},
                 txtSetFocus: false,
@@ -579,12 +594,16 @@
                 },
                 async getData(){
                     let url = serverHosting+"/deliveryIML/dashboard/PM1Roll"
+                    let url2 = serverHosting+"/deliveryIML/belumtimbang2/PM1Roll"
                     Alpine.store('globVar').isLoading = true
                     
                     try{
                         const data = await (await fetch(url, { method: 'GET', 
                             headers: {'Content-Type': 'application/json'} })).json()
                         this.dataDashboard = data
+                        const data2 = await (await fetch(url2, { method: 'GET', 
+                            headers: {'Content-Type': 'application/json'} })).json()
+                        this.dataBelumTimbang2 = data2
                         console.log(this.dataDashboard)
                     }catch(err){
                         console.log(err)
