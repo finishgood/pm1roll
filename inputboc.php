@@ -860,7 +860,7 @@
                         item.TimeClosing = item.TimeClosing.replace(".", ":")
                     });
                     
-                    //let url = serverHosting+"/boc/add"
+                    //let url = "http://localhost:8080/boc/add"
                     let url = serverHosting + "/boc/add"
                     try {
                         const data = await (await fetch(url, { method: 'POST', 
