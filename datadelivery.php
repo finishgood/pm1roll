@@ -108,12 +108,11 @@
 <div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
-        
         <?php include "navbar.php"; ?>
     
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
-                
+
                 <?php include "sidebar.php" ?>
 
 
@@ -165,7 +164,6 @@
                                                                         <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Waktu DN</th>
                                                                         <th>Status</th>
                                                                         <th>Waktu Antri</th>
-                                                                        <th x-show="((getParameter('status')=='dn' || getParameter('status')=='yesterday'))">Qty Pallet</th>
                                                                         <th>DN</th>
                                                                     </tr>
                                                                 </thead>
@@ -174,7 +172,7 @@
                                                                         <tr>
                                                                             <th scope="row" x-text="index+1"></th>
                                                                             <td>
-                                                                                <input type="radio" name="IML" x-bind:value="delivery.NoIML" x-model="selectedIML"">
+                                                                                <input type="radio" name="IML" x-bind:value="delivery.NoIML" x-model="selectedIML">
                                                                             </td>
                                                                             <td x-text="delivery.NoIML"></td>
                                                                             <td x-text="delivery.Tujuan"></td>
@@ -186,7 +184,6 @@
                                                                             <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="formatTanggalIndonesia(delivery.WaktuDN)"></td>
                                                                             <td x-text="delivery.Status"></td>
                                                                             <td x-text="formatTanggalIndonesia(delivery.WaktuAntri)"></td>
-                                                                            <td x-show="((getParameter('status')=='dn'||getParameter('status')=='yesterday'))" x-text="delivery.QtyPallet"></td>
                                                                             <td x-text="delivery.NoDN"></td>
                                                                         </tr>
                                                                     </template>
@@ -336,6 +333,9 @@
             if(getStatus=="yesterday"){
                 url=serverHosting + "/deliveryIML/yesterday/PM1Roll/dn"
             }
+            if(getStatus=="belumtimbang2"){
+                url=serverHosting + "/deliveryIML/belumtimbang2/PM1Roll"
+            }
             Alpine.store('globVar').tableTitle = getStatus
         }
 
@@ -344,7 +344,7 @@
                 dataDelivery:{},
                 selectedIML:0,
                 getData(){
-                    console.log(0)
+                    Alpine.store('globVar').isLoading = true
                     fetch(url, {
                         method: 'GET',
                         headers: { 
@@ -357,7 +357,43 @@
                         
                     }) 
                     .then(data => {
-                        const respon = data.data
+                        let respon = data.data
+                        if(getStatus=="belumtimbang2"){
+
+                            // Example Usage:
+                            
+                            const original = respon.all
+                                
+                            const cleanedArray = original.map(obj => 
+                            Object.entries(obj).reduce((acc, [key, value]) => {
+                                // Remove all whitespace from the key
+                                const newKey = key.replace(/\s+/g, ''); 
+                                acc[newKey] = value;
+                                return acc;
+                            }, {})
+                            );
+                            // Renaming 'oldKey' to 'newKey'
+                            respon = cleanedArray.map(({ 
+                                    WaktuMulai, 
+                                    Supplier,
+                                    SJ,
+                                    Type,
+                                    NoPolisi,
+                                    NoIML,
+                                    ...rest 
+                                }) => ({
+                                WaktuAntri: WaktuMulai,
+                                Customer: Supplier,
+                                NoDN: SJ,
+                                Tujuan: Type,
+                                Nopol: NoPolisi,
+                                NoIML: NoIML,
+                                ...rest
+                                })
+                            );
+                            //console.log(updatedList);
+                            
+                        }
                         /*
                         this.dataGI = respon.gi.filter(item => {
                             let tanggal = new Date(dateYMD(item.WaktuAntri)).getTime();
@@ -381,6 +417,7 @@
                     })
                     .finally(() => {
                         
+                    Alpine.store('globVar').isLoading = false
                     });
                 },
             }
@@ -436,6 +473,9 @@
             break;
         case "batal":
             Alpine.store('globVar').tableTitle = "Batal Muat"
+            break;
+        case "belumtimbang2":
+            Alpine.store('globVar').tableTitle = "Belum Timbang 2"
             break;
         default:
             Alpine.store('globVar').tableTitle = "List Delivery"

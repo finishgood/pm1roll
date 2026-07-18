@@ -223,8 +223,9 @@
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal__export)">&nbsp;</h5></th>
                                                                     <th class="text-center align-middle"> <h5 x-text="cekExist(dataDashboard.data.today.batal)">&nbsp;</h5></th>
                                                                 </tr>
-                                                                <tr>
-                                                                    <th class=" align-middle">Belum Timbang 2
+                                                                 <tr>
+                                                                    <th class=" align-middle">Belum Timbang 2 &nbsp;
+                                                                     <a href="datadelivery.php?status=belumtimbang2"><i class="fa fa-external-link text-c-blue f-16"></i></a>
                                                                     </th>
                                                                         
                                                                     <th class="text-center align-middle"> <h5 x-text="dataBelumTimbang2.data.hasOwnProperty('local')?dataBelumTimbang2.data.local.length:0">&nbsp;</h5></th>
