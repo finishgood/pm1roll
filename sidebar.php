@@ -97,7 +97,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="inputforklift.php" class="waves-effect waves-dark">
+                                            <a href="inputforklift.php" target="_blank" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.dash.main">Input Forklift</span>
                                                 <span class="pcoded-mcaret"></span>
