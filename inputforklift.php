@@ -291,7 +291,7 @@
                 jenisKendaraan:"",
                 status:"",
                 customer:"",
-                loginforklift: this.readForklift().forklift,
+                loginforklift: false,
                 clearForm(){
                     this.warehouse = "PM1Roll"
                     this.noIML = ""
@@ -306,7 +306,7 @@
                     this.jenisKendaraan = ""
                     this.customer = ""
                     this.status = ""
-                    //this.loginforklift = false
+                    this.loginforklift = false
                 },
                 setForklift(){
                     console.log(this.noForklift)
