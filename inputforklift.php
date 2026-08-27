@@ -298,7 +298,7 @@
                     this.action = "proses"
                     this.btnText = "Proses"
                     this.btnClass = "Class"
-                    this.noForklift = ""
+                    //this.noForklift = ""
                     this.detailIMLShow = false
                     this.btnShow = false 
                     this.namaDriver = ""
@@ -332,6 +332,8 @@
                 unSetForklift(){
                     localStorage.removeItem('forklift')
                     localStorage.removeItem('loginforklift')
+                    this.loginforklift = false
+                    this.noForklift = ""
                     this.clearForm()
                     this.$refs.txt_noForklift.focus()
                     
