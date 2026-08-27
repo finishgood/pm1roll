@@ -278,7 +278,7 @@
             return {
                 warehouse: "PM1Roll",
                 noIML: "",
-                noForklift: this.readForklift().forklift,
+                noForklift: "",
                 errors: {},
                 imlData: {},
                 btnText:"Proses",
@@ -298,7 +298,7 @@
                     this.action = "proses"
                     this.btnText = "Proses"
                     this.btnClass = "Class"
-                    this.noForklift = this.readForklift().forklift
+                    this.noForklift = ""
                     this.detailIMLShow = false
                     this.btnShow = false 
                     this.namaDriver = ""
