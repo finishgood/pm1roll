@@ -3,15 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Antrian Surat Jalan</title>
-   <script type="module">
-        import { getAntrian } from './assets/js/staying.js';
-        const modelStaying = { getAntrian }
-        window.modelStaying = modelStaying; // Attach object to global scope
-
-    </script>
   <script src="https://cdn.tailwindcss.com"></script>
   
-    <script type="text/javascript" src="assets/js/functionIKK.js "></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -89,7 +82,7 @@
   </div>
 
   <!-- OPERATOR PANEL -->
-  <div class="p-4" style="display: none;">
+  <div class="p-4 d-none">
     <div class="bg-gray-200 rounded-2xl p-4">
       <h2 class="text-xl mb-4">Panel Operator</h2>
 
