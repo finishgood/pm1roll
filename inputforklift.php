@@ -306,7 +306,7 @@
                     this.jenisKendaraan = ""
                     this.customer = ""
                     this.status = ""
-                    this.loginforklift = false
+                    //this.loginforklift = false
                 },
                 setForklift(){
                     console.log(this.noForklift)
